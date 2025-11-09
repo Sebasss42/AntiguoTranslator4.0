@@ -1,30 +1,37 @@
 *{
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
+  color: #fff;
 }
 
 @font-face {
   font-family: "antiguoFont";
   src: url("antiguo_jesulink.ttf")
 }
-
+  
 body{
   background-image: url(backgroun.png);
-  background-position: center;
-  background-size: cover;
+  background-position: left top;
+  background-size: 1000px;
 }
 
-h1, .spanish-to-antiguo-text, footer{
+h1{
   color: white; 
+}
+
+h3{
+  margin-bottom: 0;
 }
 
 .container {
   display: flex;
   margin: auto;
+  width: 70%;
   flex-direction: column;
 }
 
 .number-translators, .text-translators {
+  display: flex;
   text-align: center;
   justify-content: space-around;
   margin-top: 6rem;
@@ -36,9 +43,19 @@ h1, .spanish-to-antiguo-text, footer{
   flex-direction: column;  
 }
 
+.antiguo-from-spanish {  
+  font-size: 40px;
+  color: white;
+}
+
+.spanish-to-antiguo-text {  
+  color: white;
+}
+
 #antiguo-numbers-grid, #antiguo-letters-grid {
   display: flex;
   flex-flow: row wrap;
+  width: 950px;
 }
 
 #antiguo-letters-grid {
@@ -48,10 +65,24 @@ h1, .spanish-to-antiguo-text, footer{
 .antiguo-button {
   display: flex;
   flex-direction: column;
+  width: 2.7rem;
+  margin: 0.5rem 0.5rem;
+  padding-top: 2%;
+  background-color: gray;
 }
 
 .button-content {
-  margin: auto  
+  margin: auto;
+  
+}
+
+.button-content-antiguo {
+  padding-left: 0.1rem;
+  font-size: 2rem;
+}
+
+.button-content-letter {
+  font-size: 1.5rem;
 }
 
 .antiguo-font {
@@ -60,7 +91,12 @@ h1, .spanish-to-antiguo-text, footer{
 }
 
 .antiguo-to-spanish-text {
+  width: 40%;
   color: white;
+}
+
+#text-input-number, #text-input-text{
+  padding: 0.4em;
 }
 
 button{
@@ -77,21 +113,26 @@ button:active{
   color: LightGray;
 }
 
-.star{
-  margin-top: 3%;
-  padding: 2% 0;
+.star, .fini{
+  padding: 10px 0;
+  width: 100px;
+  background-color: gray;
 }
 
-.fini{
-  margin: 3%;
-  padding: 2% 5%;
+.stars{
+  display: flex;
+  gap: 10px; /* separación entre botones */
+  justify-content: flex-start; /* o 'flex-start', 'flex-end', etc. */
 }
 
-textarea, div div div input{
+textarea, input{
   border: 1em;
+  resize: vertical;
+  width: 50%;
+  border-radius: 2px;
 }
 
-textarea:focus, div div div input:focus{
+textarea:focus, input:focus{
   outline: none;
 }
 
@@ -100,10 +141,13 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.final{
+a{
+  font-size: larger;
+  text-align: center;
+  padding: 1% 4%;
   color: white;
   text-decoration: none;
-  border-radius: 2em;
+  border-radius: 5em;
 }
 
 .boton-verde{
@@ -119,214 +163,78 @@ input::-webkit-inner-spin-button {
 }
 
 .boton-rojo:hover{
-  background-color: #C9543B;
+  background-color: #f32039;
 }
 
-@media screen and (min-width: 768px) {
+footer{
+  color: white;
+  margin-top: 5%;
+}
 
-  h1{
-    font-size: 9vw;
+.text-translators:last-of-type {
+    margin-bottom: 5%;
   }
 
   .container {
-    width: 95%;
-  }
-
-  .number-translators, .text-translators {
-    display:block;
-  }
-
-  
-  .number-translator, .text-translator {
-    margin-top: 6rem;
-  }
-
-  .number-translator:first-of-type{
-    margin-top: 0;
-  }
-
-  .antiguo-from-spanish {  
-    font-size: 10vw;
-    color: white;
-  }
-  
-  .spanish-to-antiguo-text {  
-    text-align: center;
-    font-size: 5vw;  
-    color: white;
-  }
-
-  .spanish-to-antiguo-text:first-of-type{
-    margin-top: 2rem;
-  }
-  
-  #antiguo-numbers-grid, #antiguo-letters-grid {
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  #antiguo-numbers-grid{
-    margin-left: 14%;
-  }
-  
-  #antiguo-letters-grid {
-    margin: auto;
-    margin-left: 8%;
-  }
-
-  .antiguo-button {
-    width: 15%;
-    margin-left: 1%;
-    margin-top: 2%;
-    padding-top: 2%;
-  }
-
-  #antiguo-letters-grid .antiguo-button{
-    margin-left: 2.5%;
-  }
-
-  .button-content-antiguo {
-    padding-left: 0.1rem;
-    font-size: 9vw;
-  }
-  
-  .button-content-letter {
-    font-size: 6vw;
-  }
-
-  .antiguo-to-spanish-text {
-    width: 99%;
-    font-size: 2em;  
-    margin-top: 6rem;
-  }
-
-  #bobo{
-    font-size: 20px;  
-  }
-
-  #antiguo-from-letter-text, #antiguo-from-letter{
-    margin: 0;
-  }
-  
-  #text-input-number, #text-input-text{
-    padding: 0.4em;
-    font-size: 6vw;
-  }
-
-  .star{
-    font-size: 4vw;
-  }
-  
-  .fini{
-    font-size: 4vw;
-  }
-  
-  .final{
-    font-size: 5vw;
-    text-align: center;
-    padding: 3% 4%;
-    display: block;
-    margin: 5%;
-    width: 80%;
-  }
-  
-  footer{
-    font-size: 3vw;
-  }
-
-  #blanco{
-    font-size: 5vw;
-  }
-
-  .base{
-    font-size: 4.5vw;
-  }
-
+  display: flex !important;
+}
+main section {
+  display: none;
+  padding: 20px;
+}
+.active {
+  display: block;
 }
 
-@media screen and (min-width: 992px){
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: seagreen;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  justify-content: space-between; /* Distribuye: arriba el contenido, abajo el footer */
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 0 2em 2em 0 ;
+}
 
-  h1{
-    font-size: 40px;
-  }
-        
-  .container {
-    width: 70%;
-  }
+nav h1 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
 
-  .number-translators, .text-translators {
-    display: flex;
-  }
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaciado entre botones */
+}
 
-  .number-translator, .text-translator {
-    margin-top: 0;
-  }
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
 
-  .antiguo-from-spanish {  
-    font-size: 40px;
-  }
-  
-  .spanish-to-antiguo-text {  
-    text-align: center;
-    font-size: 20px; 
-    margin-top: 0;
-  }
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
 
-  #antiguo-numbers-grid{
-    margin-left: auto;
-  }
-  
-  #antiguo-letters-grid {
-    margin: auto;
-    padding: 0 2%;
-  }
-
-  .antiguo-button {
-    width: 2.7rem;
-    margin: 0.5rem 0.25rem;
-  }
-
-  .button-content-antiguo {
-    padding-left: 0.1rem;
-    font-size: 2rem;
-  }
-
-  .button-content-letter {
-    font-size: 1.5rem;
-  }
-
-  .antiguo-to-spanish-text {
-    width: 40%;
-    font-size: 2em;  
+nav footer{
     margin-top: auto;
-  }
+    justify-content: space-between;
+    font-size: 0.8em;
+  opacity: 0.8;
+  line-height: 1.4;
+}
 
-  #antiguo-from-letter-text, #antiguo-from-letter{
-    margin: auto;
-  }
-
-  #text-input-number, #text-input-text{
-    font-size: 15px;
-  }
-
-  .star, .fini{
-    font-size: 15px;
-  }
-
-  .final{
-    display: inline-block;
-    font-size: larger;
-    padding: 1%;
-    margin: 5%;
-    margin-left: 16%;
-    width: 20%;
-  }
-
-  footer, #blanco{
-    font-size: 20px;
-  }
-
-  .base{
-    font-size: 18px;
-  }
+section{
+    margin-left: 100px;
 }
