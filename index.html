@@ -1,76 +1,130 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script src="./files/jquery.min.js"></script>
     <script src="./files/toAntiguo.js"></script>
     <script src="./files/values.js"></script>
     <link href='https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./files/style.css">
-
-    <link rel="shortcut icon" type="image/x-icon" href="./files/favicon.ico">
-    <title>Traductor Antiguo 3.0</title>
 </head>
 
-<body> 
-  <h1>Traductor Alfanumérico de Antiguo</h1>
-  <div class="container">
-    <div class="number-translators">
-      <div class="number-translator spanish-to-antiguo-number">
-        <span class="spanish-to-antiguo-text">Número a Antiguo</span>
-        <span class="antiguo-font antiguo-from-spanish" id="antiguo-from-spanish-number">0 1 2 3 4</span>
-        <input type="number" min="1" placeholder="Escribe números aquí" id="text-input-number" onkeyup="transcribeNumberFromInput()" onkeypress="return onlyNumberKey(event)">
-      </div>
-
-      <div class="number-translator antiguo-to-spanish-number">
-        <span id="blanco">Antiguo a Número</span>
-        <div class="base">Base 5:</div> <span class="antiguo-font antiguo-from-spanish" id="antiguo-number">01234</span>
-        <div class="base">Base 10:</div> <span class="antiguo-from-spanish" id="number-from-antiguo-number">01234</span>
-        <div id="antiguo-numbers-grid">
-        </div>       
-        <button class="star" onclick="cleanAntiguoToNumber()">Limpiar</button>
-        <button class="star" onclick="cleanLastAntiguoToNumber()">Borrar ultimo</button>
-      </div>
-    </div> 
-
-
-    <div class="text-translators">
-      <div class="text-translator spanish-to-antiguo-text">
-        <span>Antiguo a Texto</span>
-        <span class="antiguo-font antiguo-from-spanish" id="antiguo-from-spanish-text">Este es un ejemplo</span>
-        <textarea type="text" maxlength="40" id="text-input-text" placeholder="Escribe algo aquí" onkeyup="transcribeTextFromInput()"></textarea>
-      </div>
-  
-      <div class="antiguo-to-spanish-text">
-        <span id="bobo">Texto a Antiguo</span>
-        <span class="antiguo-font text-translator antiguo-from-spanish" id="antiguo-from-letter">Este es un ejemplo</span>
-
-        <span class="text-translator antiguo-from-spanish" id="antiguo-from-letter-text">Este es un ejemplo</span>
-
-        <button class="fini" onclick="cleanAntiguoToLetter()">Limpiar</button>
-
-        <button class="fini" onclick="cleanLastAntiguoToLetter()">Borrar ultimo</button>
-
-        <div id="antiguo-letters-grid"></div>       
-      </div>      
-    </div>   
+<body>    
+<div class="container">    
+  <nav>
+    <h1>TRADUCTOR ANTIGUO</h1>
+  <div class="nav-links">
+    <a data-id="1">¿Qué es el Lenguaje Antiguo?</a>
+    <a data-id="2">Traducir de Español a Antiguo</a>
+    <a data-id="3">Traducir de Antiguo a Español</a>
+    <a data-id="4">Descargar Tipografía</a>
   </div>
-      <a class="final boton-verde" href=https://sebasss42.github.io/AntiguoTranslator3.0/files/antiguo_jesulink.ttf target="_blank">Descargar Fuente</a>
-      <a class="final boton-rojo" href="https://jesulink.com/descargas.php?sub=cincoelementos" target="_blank">Leer 5 elementos</a>
   <footer>
-    <p>Idea, Diseño y Fuente por SebaStudios</p>
-    <p>Funcionamiento por Diphendara.</p>
+    <p>Idea, Diseño y Fuente por Sebastián Rondón.</p>
+    <p>Funcionamiento por Cristian Suarez</p>
   </footer>
+  </nav>
+  <main>
+    <section class="active">
+        <h2>
+            ¿Qué es el Lenguaje Antiguo?
+        </h2>
+        <p>
+            El lenguaje Antiguo es un lenguaje ficticio, incorporado y muy presente en el manga de Jesulink, 5 elementos.<br><br>
+            
+            Según la historia, el lenguaje Antiguo es el lenguaje utilizado por los "Antiguos", los cuales fueron una civilización que vivió hace más de 5000 años. En los reinos al oeste del océano, este idioma recibe el nombre de la "lengua de Aya".<br><br>
 
-  <script>
-    function onlyNumberKey(evt) {
-          
-        // Only ASCII character in that range allowed
-        var ASCIICode = (evt.which) ? evt.which : evt.keyCode
-        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
-            return false;
-        return true;
-    }
+            Las letras del lenguaje antiguo también son conocidas como girosímbolos. El antiguo tiene girosímbolos correspondientes de la B a la Z, la letra "A" es similar a una marca de acentuación con forma de línea horizontal que se coloca sobre la consonante anterior. Por ejemplo, en caso de que haya escrita una "R" con una línea horizontal encima, se pronuncia "RA".<br><br>
+
+            A continuación está una pequeña tabla con todos los girosímbolos y números pertenecientes al Antiguo.<br>
+        </p>
+        <img src="./files/image.jpg" width="75%" style="filter: grayscale(100%); border-radius: 2em;">
+        <p>
+            Para más información sobre los Antiguos, su lenguaje y Aya, puedes leer el manga pulsando el siguiente botón.
+        </p>
+        <br>
+        <a class="final boton-rojo" href="https://jesulink.com/capitulos-5elementos" target="_blank">Leer 5 elementos</a>
+    </section>
+
+    <section>
+        <h2>Traducir de Español a Antiguo</h2>
+        <p>
+            Si quieres traducir un texto de español a Antiguo, aquí puedes hacerlo tanto con palabras como con números.
+        </p>
+        <h3>Texto</h3>
+        <div class="text-translator spanish-to-antiguo-text">
+            <span class="antiguo-font antiguo-from-spanish" id="antiguo-from-spanish-text">Este es un ejemplo</span>
+            <textarea style="color:black;" type="text" maxlength="40" id="text-input-text" placeholder="Escribe algo aquí" onkeyup="transcribeTextFromInput()"></textarea>
+            <span> <i>Lo que escribas aquí se mostrará con los girosímbolos del Antiguo</i></span>
+        </div>
+        <br>
+        <h3>Números</h3>
+        <div class="number-translator spanish-to-antiguo-number">
+            <span class="antiguo-font antiguo-from-spanish" id="antiguo-from-spanish-number">0 1 2 3 4</span>
+            <input style="color:black;" type="number" min="1" placeholder="Escribe números aquí" id="text-input-number" onkeyup="transcribeNumberFromInput()">
+            <span class="spanish-to-antiguo-text"><i>Lo que escribas aquí se convertirá en un número con girosímbolos de base 5</i></span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Traducir de Antiguo a Español</h2>
+        <p>
+            Si tienes un texto en Antiguo y quieres saber qué es lo que dice en español, aquí puedes hacerlo tanto con palabras como con números.
+        </p>
+        <h3>Texto</h3>
+        <div class="antiguo-to-spanish-text">
+            <span class="antiguo-font text-translator antiguo-from-spanish" id="antiguo-from-letter" style="width: 950px;">Este es un ejemplo</span>
+
+            <span class="text-translator antiguo-from-spanish" id="antiguo-from-letter-text" style="width: 950px;">Este es un ejemplo</span>
+
+            <button class="fini" onclick="cleanAntiguoToLetter()">Limpiar</button>
+
+            <button class="fini" onclick="cleanLastAntiguoToLetter()">Borrar ultimo</button>
+
+            <div id="antiguo-letters-grid">
+            </div>       
+            
+            <span><i>Usa los botones para recrear tu texto con los girosímbolos</i></span>
+        </div>      
+        <br>
+        <h3>Números</h3>
+        <div class="number-translator antiguo-to-spanish-number">
+            <div class="base">Base 5:</div> <span class="antiguo-font antiguo-from-spanish" id="antiguo-number">01234</span>
+
+            <div class="base">Base 10:</div> <span class="antiguo-from-spanish" id="number-from-antiguo-number">01234</span>
+            <div class="stars">
+            <button class="star" onclick="cleanAntiguoToNumber()">Limpiar</button>
+
+            <button class="star" onclick="cleanLastAntiguoToNumber()">Borrar ultimo</button>
+            </div>
+
+            <div id="antiguo-numbers-grid">
+            </div>       
+
+            <span id="blanco"><i>Usa los botones para recrear tu número con los girosímbolos</i></span>
+      </div>
+    </section>
+
+    <section>
+        <h2>Descargar Tipografía</h2>
+        <p>¿Quieres escribir en Antiguo en tus programas de confianza? Puedes pulsar el botón y se descargará la tipografía del Antiguo. <br>Una vez descargada solo la instalas en tu ordenador y serás capáz de escribir lo que quieras en Antiguo.</p><br>
+        <a class="final boton-verde" href=https://sebasss42.github.io/AntiguoTranslator3.0/files/antiguo_jesulink.ttf target="_blank">Descargar Tipografía</a>
+    </section>
+  </main>
+
+</div>    
+
+ <script type="text/javascript">    
+/*jshint esversion: 6 */
+document.querySelectorAll('nav a')
+.forEach(e => e.addEventListener('click', _ => change(e.dataset.id)));    
+
+function change(n) {
+  let panels = document.querySelectorAll('main section');
+  panels.forEach(p => p.classList.remove('active'));
+  panels[n - 1].classList.add('active');
+}    
 </script>
 </body>
+</html>
 </html>
