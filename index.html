@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -7,7 +6,6 @@
     <script src="./files/values.js"></script>
     <link href='https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./files/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./files/favicon.ico">
 </head>
 
 <body>    
@@ -44,7 +42,7 @@
             Para más información sobre los Antiguos, su lenguaje y Aya, puedes leer el manga pulsando el siguiente botón.
         </p>
         <br>
-        <a class="final boton-rojo" href="https://jesulink.com/capitulos-5elementos" target="_blank">Leer 5 elementos</a>
+        <span id="zero"><a class="final boton-rojo" href="https://jesulink.com/capitulos-5elementos" target="_blank">Leer 5 elementos</a></span>
     </section>
 
     <section>
@@ -74,9 +72,9 @@
         </p>
         <h3>Texto</h3>
         <div class="antiguo-to-spanish-text">
-            <span class="antiguo-font text-translator antiguo-from-spanish" id="antiguo-from-letter" style="width: 950px;">Este es un ejemplo</span>
+            <span class="antiguo-font text-translator antiguo-from-spanish" id="antiguo-from-letter">Este es un ejemplo</span>
 
-            <span class="text-translator antiguo-from-spanish" id="antiguo-from-letter-text" style="width: 950px;">Este es un ejemplo</span>
+            <span class="text-translator antiguo-from-spanish" id="antiguo-from-letter-text">Este es un ejemplo</span>
 
             <button class="fini" onclick="cleanAntiguoToLetter()">Limpiar</button>
 
@@ -127,5 +125,4 @@ function change(n) {
 }    
 </script>
 </body>
-</html>
 </html>
