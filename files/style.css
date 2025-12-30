@@ -460,6 +460,13 @@ footer{
 }
 
 }
+@media only screen and (max-width: 718px){
+
+h1{
+    line-height: normal;
+  }
+  
+}
 
 @media only screen and (max-width: 570px){
   nav a{
@@ -486,7 +493,7 @@ footer{
   }
 
   main{
-    margin-top: 125px;
+    margin-top: 225px;
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -498,12 +505,8 @@ footer{
 }
 
 @media only screen and (max-width: 398px){
-  h1{
-    line-height: normal;
-  }
-
   
-
+  
   .wtf{
     color: #C3041A;
     display: none;
@@ -519,5 +522,6 @@ footer{
    
   }
 }
+
 
 
