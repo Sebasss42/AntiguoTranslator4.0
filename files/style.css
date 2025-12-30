@@ -463,7 +463,7 @@ footer{
 @media only screen and (max-width: 718px){
 
 h1{
-    line-height: normal;
+    line-height: normal !important;
   }
   
 }
@@ -493,7 +493,7 @@ h1{
   }
 
   main{
-    margin-top: 225px;
+    margin-top: 185px;
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -522,6 +522,7 @@ h1{
    
   }
 }
+
 
 
 
