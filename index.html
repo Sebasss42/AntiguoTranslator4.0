@@ -6,25 +6,28 @@
     <script src="./files/values.js"></script>
     <link href='https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./files/style.css">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
 
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./files/favicon.ico">
+    <link href="https://db.onlinewebfonts.com/c/10ec6f12774b4f6de35284016f7b1bd5?family=Poplar+Std+Black" rel="stylesheet">
 
 </head>
 
 <body>    
 <div class="container">    
   <nav>
-    <h1>TRADUCTOR ANTIGUO</h1>
+    <h1 class="unselectable">tRductor Antiguo</h1>
   <div class="nav-links">
-    <a data-id="1">¿Qué es el Lenguaje Antiguo?</a>
-    <a data-id="2">Traducir de Español a Antiguo</a>
-    <a data-id="3">Traducir de Antiguo a Español</a>
-    <a data-id="4">Descargar Tipografía</a>
+    <a data-id="1" class="unselectable">¿Qué es el Lenguaje Antiguo?</a>
+    <a data-id="2" class="unselectable">Traducir de Español a Antiguo</a>
+    <a data-id="3" class="unselectable">Traducir de Antiguo a Español</a>
+    <a data-id="4" class="unselectable">Descargar Tipografía</a>
   </div>
-  <footer>
-    <p>Idea, Diseño y Fuente por SebaStudios.</p>
+
+  <div class="navfoot">
+    <p>Diseño y Tipografía por Sebastudios.</p>
     <p>Funcionamiento por Diphendara</p>
-  </footer>
+  </div>
   </nav>
   <main>
     <section class="active">
@@ -32,20 +35,21 @@
             ¿Qué es el Lenguaje Antiguo?
         </h2>
         <p>
-            El lenguaje Antiguo es un lenguaje ficticio, incorporado y muy presente en el manga de Jesulink, 5 elementos.<br><br>
+            El lenguaje Antiguo es un lenguaje ficticio, incorporado y muy presente en el manga de Jesulink, <span style="font-family: Poplar Std Black; font-size: x-large;">5elementoS</span>.<br><br>
             
             Según la historia, el lenguaje Antiguo es el lenguaje utilizado por los "Antiguos", los cuales fueron una civilización que vivió hace más de 5000 años. En los reinos al oeste del océano, este idioma recibe el nombre de la "lengua de Aya".<br><br>
 
-            Las letras del lenguaje antiguo también son conocidas como girosímbolos. El antiguo tiene girosímbolos correspondientes de la B a la Z, la letra "A" es similar a una marca de acentuación con forma de línea horizontal que se coloca sobre la consonante anterior. Por ejemplo, en caso de que haya escrita una "R" con una línea horizontal encima, se pronuncia "RA".<br><br>
-
+            Las letras del lenguaje antiguo también son conocidas como girosímbolos. El antiguo tiene girosímbolos correspondientes de la B a la Z, la letra "A" es similar a una marca de acentuación con forma de línea horizontal que se coloca sobre la consonante anterior. Por ejemplo, en caso de que haya escrita una "R" con una línea horizontal encima, se pronuncia "RA".<br><br class="wtf">
+          <span class="wtf">
             A continuación está una pequeña tabla con todos los girosímbolos y números pertenecientes al Antiguo.<br>
+          </span>
         </p>
-        <img src="./files/image.jpg" width="75%" style="filter: grayscale(100%); border-radius: 2em;">
+        <img class="wtf" src="./files/image.jpg" width="75%" style="filter: grayscale(100%); border-radius: 2em; max-width: 900px;">
         <p>
             Para más información sobre los Antiguos, su lenguaje y Aya, puedes leer el manga pulsando el siguiente botón.
         </p>
         <br>
-        <span id="zero"><a class="final boton-rojo" href="https://jesulink.com/capitulos-5elementos" target="_blank">Leer 5 elementos</a></span>
+        <span id="zero"><a class="final boton-rojo" href="https://jesulink.com/capitulos-5elementos" target="_blank">Leer <span style="font-family: Poplar Std Black; font-size: larger;">5elementoS</span></a></span>
     </section>
 
     <section>
@@ -78,11 +82,11 @@
             <span class="antiguo-font text-translator antiguo-from-spanish" id="antiguo-from-letter">Este es un ejemplo</span>
 
             <span class="text-translator antiguo-from-spanish" id="antiguo-from-letter-text">Este es un ejemplo</span>
-
+            <div class="stars">
             <button class="fini" onclick="cleanAntiguoToLetter()">Limpiar</button>
 
             <button class="fini" onclick="cleanLastAntiguoToLetter()">Borrar ultimo</button>
-
+            </div>
             <div id="antiguo-letters-grid">
             </div>       
             
@@ -110,11 +114,16 @@
     <section>
         <h2>Descargar Tipografía</h2>
         <p>¿Quieres escribir en Antiguo en tus programas de confianza? Puedes pulsar el botón y se descargará la tipografía del Antiguo. <br>Una vez descargada solo la instalas en tu ordenador y serás capáz de escribir lo que quieras en Antiguo.</p><br>
-        <a class="final boton-verde" href=https://sebasss42.github.io/AntiguoTranslator3.0/files/antiguo_jesulink.ttf target="_blank">Descargar Tipografía</a>
+        <a class="final boton-verde" href=https://sebasss42.github.io/AntiguoTranslator4.0/files/antiguo_jesulink.ttf target="_blank">Descargar Tipografía</a>
     </section>
   </main>
+</div>   
 
-</div>    
+
+<footer>
+    Diseño y Tipografía por SebaStudios.
+    <br>Funcionamiento por Diphendara
+  </footer>
 
  <script type="text/javascript">    
 /*jshint esversion: 6 */
