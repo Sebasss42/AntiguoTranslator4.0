@@ -493,7 +493,7 @@ h1{
   }
 
   main{
-    margin-top: 185px;
+    margin-top: 185px !important;
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -522,6 +522,7 @@ h1{
    
   }
 }
+
 
 
 
